@@ -40,5 +40,5 @@ class NaiveBayes:
         mean = self._mean[class_idx]
         var = self._var[class_idx]
         numerator = np.exp(- (x-mean)**2 / (2 * var))
-        denominator = np.sqrt(2 * np.pi * var)
+        denominator = np.sqrt(2 * np.pi * (var**2))
         return numerator / denominator
